@@ -41,6 +41,8 @@ Rover 1 movement: LMLMLMLMM
 Rover 2 deploy zone: 3 3 E
 Rover 2 movement: MMRMMRMRRM
 
+
 Expected Output:
+
 Rover 1 position: 1 3 N
 Rover 2 position: 5 1 E
