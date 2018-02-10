@@ -31,7 +31,7 @@ const rotations = {
     }
 };
 
-module.exports = function(x, y, orientation) {
+module.exports = {constr : function(x, y, orientation) {
 
     this._x = x;
     this._y = y;
@@ -69,4 +69,4 @@ module.exports = function(x, y, orientation) {
         this._rotationState = rotations[this._orientation];
     };
 
-};
+}, rotations : rotations};

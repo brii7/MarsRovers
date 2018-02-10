@@ -1,19 +1,19 @@
 'use strict';
 
-var Rover = require('./Rover.js');
+var Rover = require('./Rover.js').constr;
 
-module.exports = function(xSize,ySize) {
+module.exports = function(x, y) {
 
     var plateau = this;
 
-    this._x = xSize;
-    this._y = ySize;
+    this._x = x;
+    this._y = y;
     this._rovers = [];
     this._currentRover = 0;
 
-    this.addRover = function(x, y, orientation){
-        if(this.isPositionOk({_x : x, _y : y})){
-            this._rovers.push(new Rover(x, y, orientation));
+    this.addRover = function(roverProp){
+        if(this.isPositionOk({_x : roverProp.x, _y : roverProp.y})){
+            this._rovers.push(new Rover(roverProp.x, roverProp.y, roverProp.orientation));
         }
     };
 

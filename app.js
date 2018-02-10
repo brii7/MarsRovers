@@ -1,14 +1,27 @@
 'use strict';
 
-var Plateau = require('./classes/Plateau.js');
+var FileReader = require('./classes/FileReader.js');
+var fileReader = new FileReader();
 
-var plateau = new Plateau(5, 5);
+fileReader.readFile('./input.txt').then(function(data){
 
-plateau.addRover(1, 2, 'N');
-plateau.executeCommand('LMLMLMLMM');
-plateau.addRover(3, 3, 'E');
-plateau.executeCommand('MMRMMRMRRM');
+    var inputData  = data.split('\r\n'); // Using '\r\n' instead of '\n' because of Windows
+    var plateau    = fileReader.createPlateau(inputData.shift());
 
-plateau.getRoversPosition().forEach(function (roverPos){
-    console.log(roverPos.x, roverPos.y, roverPos.orientation);
+    while(plateau && inputData.length > 0){
+
+        var roverProp = fileReader.parseRover(inputData.shift());
+        plateau.addRover(roverProp);
+        plateau.executeCommand(inputData.shift());
+
+    }
+
+    console.log('____OUTPUT____');
+    plateau.getRoversPosition().forEach(function (roverPos){
+        console.log(roverPos.x, roverPos.y, roverPos.orientation);
+    });
+
+
+}).catch(function(err){
+    console.log(err);
 });
