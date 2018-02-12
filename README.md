@@ -1,9 +1,7 @@
 This is just my own go on a Mars Rovers coding challenge. I wanted to use javascript so I went with node instead of a browser execution.
 
-Nothing else interesting tbh.
+# Mars Rovers (NodeJS)
 
-
-Mars Rovers
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This
 plateau, which is curiously rectangular, must be navigated by the rovers so that their
@@ -29,20 +27,32 @@ corresponding to the x and y coordinates and the rover’s orientation.
 Each rover will be finished sequentially, which means that the second rover won’t
 start to move until the first one has finished moving.
 
-Output: The output for each rover should be its final coordinates and heading. Input
-and
+###### Output: The output for each rover should be its final coordinates and heading. Input and
 
 
-Test Input:
+
+###### Test Input:
 
 Plateau size: 5x5
+
 Rover 1 deploy zone: 1 2 N
+
 Rover 1 movement: LMLMLMLMM
+
 Rover 2 deploy zone: 3 3 E
+
 Rover 2 movement: MMRMMRMRRM
 
 
-Expected Output:
+
+###### Expected Output:
 
 Rover 1 position: 1 3 N
+
 Rover 2 position: 5 1 E
+
+
+
+## Important notes
+
+There's different aproach to problems like out of bounds movements, or collisions. I was not told how to control each one of them, so what I did is that when a Rover is about to move to where another Rover is, or out of the plateau, it will ignore that single movement and continue with the rest of the movements. I could've gone with crashing and deleting the crashed Rover, but to be honest, I wasn't 100% sure how to approach it so I left it like that.
