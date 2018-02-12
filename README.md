@@ -30,13 +30,11 @@ corresponding to the x and y coordinates and the rover’s orientation.
 Each rover will be finished sequentially, which means that the second rover won’t
 start to move until the first one has finished moving.
 
-Output: The output for each rover should be its final coordinates and heading. Input
-and
+###### Output: The output for each rover should be its final coordinates and heading. Input and
 
 
 
-Test Input:
-
+###### Test Input:
 
 Plateau size: 5x5
 
@@ -50,8 +48,7 @@ Rover 2 movement: MMRMMRMRRM
 
 
 
-Expected Output:
-
+###### Expected Output:
 
 Rover 1 position: 1 3 N
 
