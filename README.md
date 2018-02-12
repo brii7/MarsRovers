@@ -3,7 +3,8 @@ This is just my own go on a Mars Rovers coding challenge. I wanted to use javasc
 Nothing else interesting tbh.
 
 
-Mars Rovers
+# Mars Rovers (NodeJS)
+
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This
 plateau, which is curiously rectangular, must be navigated by the rovers so that their
@@ -33,16 +34,26 @@ Output: The output for each rover should be its final coordinates and heading. I
 and
 
 
+
 Test Input:
 
+
 Plateau size: 5x5
+
 Rover 1 deploy zone: 1 2 N
+
 Rover 1 movement: LMLMLMLMM
+
 Rover 2 deploy zone: 3 3 E
+
 Rover 2 movement: MMRMMRMRRM
+
 
 
 Expected Output:
 
+
 Rover 1 position: 1 3 N
+
 Rover 2 position: 5 1 E
+
