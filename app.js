@@ -1,6 +1,7 @@
 'use strict';
 
 var FileReader = require('./classes/FileReader.js');
+var fs         = require('fs');
 var fileReader = new FileReader();
 
 fileReader.readFile('./input.txt').then(function(data){
@@ -23,5 +24,9 @@ fileReader.readFile('./input.txt').then(function(data){
 
 
 }).catch(function(err){
-    console.log(err);
+    var now = new Date();
+    fs.appendFile('./logs/errors.log', '\n'+now.toLocaleString()+' - '+err, function(error){
+        if(error) throw Error('There was an error, could not write log file.')
+    });
+    console.log('There was an error.');
 });

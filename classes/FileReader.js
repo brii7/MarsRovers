@@ -20,7 +20,7 @@ module.exports = function() {
         if(values.length === 2 && !isNaN(values[0]) && !isNaN(values[1])){
             return new Plateau(values[0], values[1]);
         } else {
-            throw Error("Plateau couldn't be created. Make sure your input is correct.");
+            throw Error("Plateau couldn't be created. Make sure the input is correct.");
         }
     };
 
@@ -33,7 +33,7 @@ module.exports = function() {
                 orientation : values[2]
             }
         } else {
-            throw Error("Rover couldn't be added. Make sure your input is correct.");
+            throw Error("Rover couldn't be added. Make sure the input is correct.");
         }
     };
 };
