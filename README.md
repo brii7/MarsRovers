@@ -54,3 +54,8 @@ Rover 1 position: 1 3 N
 
 Rover 2 position: 5 1 E
 
+
+
+## Important notes
+
+There's different aproach to problems like out of bounds movements, or collisions. I was not told how to control each one of them, so what I did is that a Rover is about to move to where another Rover is, or out of the plateau, it will ignore that single movement and continue with the rest of the movements. I could've gone with crashing and deleting the crashed Rover, but to be honest, I wasn't 100% sure how to approach it so I left it like that.
