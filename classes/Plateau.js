@@ -17,6 +17,10 @@ module.exports = function(x, y) {
         }
     };
 
+    this.getRovers = function(){
+      return plateau._rovers;
+    };
+
     this.executeCommand = function(commandString){
 
         var currentRover = this._rovers[this._currentRover];
@@ -50,7 +54,7 @@ module.exports = function(x, y) {
     };
 
     this.isPositionOk = function(desiredPos){
-        if(desiredPos._x <= plateau._x || desiredPos._y <= plateau._y){
+        if(desiredPos && (desiredPos._x <= plateau._x && desiredPos._y <= plateau._y)){
             return !this.getRoversPosition().some(function(existingRover){
                 return existingRover.x === desiredPos._x && existingRover.y === desiredPos._y;
             });

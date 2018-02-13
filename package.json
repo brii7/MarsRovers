@@ -5,6 +5,8 @@
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  },
   "author": "Brian Suárez"
 }
